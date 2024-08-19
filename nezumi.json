@@ -1,0 +1,75 @@
+{
+  "song_name": "Rodent Realm Parade",
+  "tempo": 140,
+  "notes": [
+    {"pulse1": 392, "pulse2": 0, "triangle": 196, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 196, "noise": 0},
+    {"pulse1": 392, "pulse2": 330, "triangle": 196, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 196, "noise": 0},
+    
+    {"pulse1": 440, "pulse2": 0, "triangle": 220, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 220, "noise": 0},
+    {"pulse1": 440, "pulse2": 349, "triangle": 220, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 220, "noise": 0},
+    
+    {"pulse1": 494, "pulse2": 0, "triangle": 247, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 247, "noise": 0},
+    {"pulse1": 494, "pulse2": 392, "triangle": 247, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 247, "noise": 0},
+    
+    {"pulse1": 523, "pulse2": 0, "triangle": 262, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 262, "noise": 0},
+    {"pulse1": 523, "pulse2": 440, "triangle": 262, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 262, "noise": 0},
+    
+    {"pulse1": 587, "pulse2": 494, "triangle": 294, "noise": 100},
+    {"pulse1": 587, "pulse2": 0, "triangle": 294, "noise": 0},
+    {"pulse1": 587, "pulse2": 494, "triangle": 294, "noise": 100},
+    {"pulse1": 587, "pulse2": 0, "triangle": 294, "noise": 0},
+    
+    {"pulse1": 523, "pulse2": 440, "triangle": 262, "noise": 100},
+    {"pulse1": 523, "pulse2": 0, "triangle": 262, "noise": 0},
+    {"pulse1": 523, "pulse2": 440, "triangle": 262, "noise": 100},
+    {"pulse1": 523, "pulse2": 0, "triangle": 262, "noise": 0},
+    
+    {"pulse1": 494, "pulse2": 392, "triangle": 247, "noise": 100},
+    {"pulse1": 494, "pulse2": 0, "triangle": 247, "noise": 0},
+    {"pulse1": 494, "pulse2": 392, "triangle": 247, "noise": 100},
+    {"pulse1": 494, "pulse2": 0, "triangle": 247, "noise": 0},
+    
+    {"pulse1": 440, "pulse2": 349, "triangle": 220, "noise": 100},
+    {"pulse1": 440, "pulse2": 0, "triangle": 220, "noise": 0},
+    {"pulse1": 440, "pulse2": 349, "triangle": 220, "noise": 100},
+    {"pulse1": 440, "pulse2": 0, "triangle": 220, "noise": 0},
+    
+    {"pulse1": 392, "pulse2": 330, "triangle": 196, "noise": 100},
+    {"pulse1": 392, "pulse2": 0, "triangle": 196, "noise": 0},
+    {"pulse1": 440, "pulse2": 349, "triangle": 220, "noise": 100},
+    {"pulse1": 440, "pulse2": 0, "triangle": 220, "noise": 0},
+    
+    {"pulse1": 494, "pulse2": 392, "triangle": 247, "noise": 100},
+    {"pulse1": 494, "pulse2": 0, "triangle": 247, "noise": 0},
+    {"pulse1": 523, "pulse2": 440, "triangle": 262, "noise": 100},
+    {"pulse1": 523, "pulse2": 0, "triangle": 262, "noise": 0},
+    
+    {"pulse1": 587, "pulse2": 494, "triangle": 294, "noise": 100},
+    {"pulse1": 587, "pulse2": 0, "triangle": 294, "noise": 0},
+    {"pulse1": 659, "pulse2": 523, "triangle": 330, "noise": 100},
+    {"pulse1": 659, "pulse2": 0, "triangle": 330, "noise": 0},
+    
+    {"pulse1": 587, "pulse2": 494, "triangle": 294, "noise": 100},
+    {"pulse1": 587, "pulse2": 0, "triangle": 294, "noise": 0},
+    {"pulse1": 523, "pulse2": 440, "triangle": 262, "noise": 100},
+    {"pulse1": 523, "pulse2": 0, "triangle": 262, "noise": 0},
+    
+    {"pulse1": 494, "pulse2": 392, "triangle": 247, "noise": 100},
+    {"pulse1": 494, "pulse2": 0, "triangle": 247, "noise": 0},
+    {"pulse1": 440, "pulse2": 349, "triangle": 220, "noise": 100},
+    {"pulse1": 440, "pulse2": 0, "triangle": 220, "noise": 0},
+    
+    {"pulse1": 392, "pulse2": 330, "triangle": 196, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 196, "noise": 0},
+    {"pulse1": 392, "pulse2": 330, "triangle": 196, "noise": 100},
+    {"pulse1": 0, "pulse2": 0, "triangle": 196, "noise": 0}
+  ]
+}

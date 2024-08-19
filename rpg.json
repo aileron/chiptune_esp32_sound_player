@@ -1,0 +1,110 @@
+{
+  "song_name": "Pixel Quest: The Grand Adventure",
+  "tempo": 140,
+  "notes": [
+    {"pulse1": 392, "pulse2": 196, "triangle": 98, "noise": 0},
+    {"pulse1": 440, "pulse2": 220, "triangle": 110, "noise": 0},
+    {"pulse1": 494, "pulse2": 247, "triangle": 123, "noise": 0},
+    {"pulse1": 523, "pulse2": 262, "triangle": 131, "noise": 100},
+    
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 0},
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 0},
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 200},
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 0},
+    
+    {"pulse1": 523, "pulse2": 262, "triangle": 131, "noise": 0},
+    {"pulse1": 523, "pulse2": 262, "triangle": 131, "noise": 200},
+    {"pulse1": 494, "pulse2": 247, "triangle": 123, "noise": 0},
+    {"pulse1": 440, "pulse2": 220, "triangle": 110, "noise": 0},
+    
+    {"pulse1": 392, "pulse2": 196, "triangle": 98, "noise": 200},
+    {"pulse1": 392, "pulse2": 196, "triangle": 98, "noise": 0},
+    {"pulse1": 440, "pulse2": 220, "triangle": 110, "noise": 0},
+    {"pulse1": 494, "pulse2": 247, "triangle": 123, "noise": 200},
+    
+    {"pulse1": 523, "pulse2": 262, "triangle": 131, "noise": 0},
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 0},
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 200},
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 0},
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 200},
+    {"pulse1": 740, "pulse2": 370, "triangle": 185, "noise": 0},
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 200},
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 0},
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    {"pulse1": 740, "pulse2": 370, "triangle": 185, "noise": 200},
+    
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 0},
+    {"pulse1": 880, "pulse2": 440, "triangle": 220, "noise": 0},
+    {"pulse1": 988, "pulse2": 494, "triangle": 247, "noise": 200},
+    {"pulse1": 880, "pulse2": 440, "triangle": 220, "noise": 0},
+    
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 0},
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 200},
+    {"pulse1": 740, "pulse2": 370, "triangle": 185, "noise": 0},
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 200},
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 0},
+    {"pulse1": 523, "pulse2": 262, "triangle": 131, "noise": 0},
+    {"pulse1": 494, "pulse2": 247, "triangle": 123, "noise": 200},
+    
+    {"pulse1": 440, "pulse2": 220, "triangle": 110, "noise": 0},
+    {"pulse1": 440, "pulse2": 220, "triangle": 110, "noise": 0},
+    {"pulse1": 494, "pulse2": 247, "triangle": 123, "noise": 200},
+    {"pulse1": 523, "pulse2": 262, "triangle": 131, "noise": 0},
+    
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 0},
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 200},
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 0},
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 200},
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 0},
+    {"pulse1": 880, "pulse2": 440, "triangle": 220, "noise": 0},
+    {"pulse1": 988, "pulse2": 494, "triangle": 247, "noise": 200},
+    
+    {"pulse1": 1047, "pulse2": 523, "triangle": 262, "noise": 0},
+    {"pulse1": 1047, "pulse2": 523, "triangle": 262, "noise": 0},
+    {"pulse1": 988, "pulse2": 494, "triangle": 247, "noise": 200},
+    {"pulse1": 880, "pulse2": 440, "triangle": 220, "noise": 0},
+    
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 0},
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 200},
+    {"pulse1": 740, "pulse2": 370, "triangle": 185, "noise": 0},
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 200},
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 0},
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    {"pulse1": 740, "pulse2": 370, "triangle": 185, "noise": 200},
+    
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 0},
+    {"pulse1": 880, "pulse2": 440, "triangle": 220, "noise": 0},
+    {"pulse1": 988, "pulse2": 494, "triangle": 247, "noise": 200},
+    {"pulse1": 1047, "pulse2": 523, "triangle": 262, "noise": 0},
+    
+    {"pulse1": 1175, "pulse2": 587, "triangle": 294, "noise": 0},
+    {"pulse1": 1175, "pulse2": 587, "triangle": 294, "noise": 200},
+    {"pulse1": 1319, "pulse2": 659, "triangle": 330, "noise": 0},
+    {"pulse1": 1175, "pulse2": 587, "triangle": 294, "noise": 0},
+    
+    {"pulse1": 1047, "pulse2": 523, "triangle": 262, "noise": 200},
+    {"pulse1": 988, "pulse2": 494, "triangle": 247, "noise": 0},
+    {"pulse1": 880, "pulse2": 440, "triangle": 220, "noise": 0},
+    {"pulse1": 784, "pulse2": 392, "triangle": 196, "noise": 200},
+    
+    {"pulse1": 698, "pulse2": 349, "triangle": 175, "noise": 0},
+    {"pulse1": 659, "pulse2": 330, "triangle": 165, "noise": 0},
+    {"pulse1": 587, "pulse2": 294, "triangle": 147, "noise": 200},
+    {"pulse1": 523, "pulse2": 262, "triangle": 131, "noise": 0},
+    
+    {"pulse1": 494, "pulse2": 247, "triangle": 123, "noise": 0},
+    {"pulse1": 440, "pulse2": 220, "triangle": 110, "noise": 200},
+    {"pulse1": 392, "pulse2": 196, "triangle": 98, "noise": 0},
+    {"pulse1": 349, "pulse2": 175, "triangle": 87, "noise": 0}
+  ]
+}
