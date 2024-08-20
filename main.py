@@ -4,7 +4,7 @@ import time
 import json
 import random
 import utime
-
+import os
 
 # Functions creating Noise
 class SimpleNoiseGenerator:
@@ -40,23 +40,68 @@ class SimpleNoiseGenerator:
 class GameMusicPlayer:
     
     ## Variables initialization
-    def __init__(self, current_song_index, pulse1_pin, pulse2_pin, triangle_pin, noise_pin):
-        self.noise_gen = SimpleNoiseGenerator(noise_pin)
-        self.pulse1 = machine.PWM(machine.Pin(pulse1_pin))
-        self.pulse2 = machine.PWM(machine.Pin(pulse2_pin))
-        self.triangle = machine.PWM(machine.Pin(triangle_pin))
-        
-        self.songs = []
-        self.current_song_index = current_song_index
-        self.current_note = 0
-        self.timer = machine.Timer(0)
+    def __init__(self, filename, pulse1_pin, pulse2_pin, triangle_pin, noise_pin):
+        self.filename = filename
+        self.pulse1_pin = pulse1_pin
+        self.pulse2_pin = pulse2_pin
+        self.triangle_pin = triangle_pin
+        self.noise_pin = noise_pin
+        self.reload()
     
-    ## Songs loader function
-    def load_songs(self, filenames):
-        for filename in filenames:
+    def reload(self):
+        song = self.load_song(self.filename)
+        self.song_name = song['name']
+        self.tempo = song['tempo']
+        self.notes = song['notes']
+        
+        self.timer = machine.Timer(0)
+        self.noise_gen = SimpleNoiseGenerator(self.noise_pin)
+        self.pulse1 = machine.PWM(machine.Pin(self.pulse1_pin))
+        self.pulse2 = machine.PWM(machine.Pin(self.pulse2_pin))
+        self.triangle = machine.PWM(machine.Pin(self.triangle_pin))
+
+    def load_song(self, filename):
+        def parse_metadata(line):
+            key, value = map(str.strip, line.split(',', 1))
+            return key, value
+
+        def parse_note(line):
+            values = list(map(int, line.strip().split(',')))
+            return {
+                'pulse1': values[0],
+                'pulse2': values[1],
+                'triangle': values[2],
+                'noise': values[3],
+                'duration': values[4]
+            }
+        
+        def song_generator():
             with open(filename, 'r') as f:
-                self.songs.append(json.load(f))
-        print(f"Loaded {len(self.songs)} songs.")
+                metadata = {}
+                for line in f:
+                    if line.strip().startswith('#'):
+                        break
+                    key, value = parse_metadata(line)
+                    metadata[key] = value
+                
+                yield metadata
+                
+                next(f)  # Skip header row
+                for line in f:
+                    yield parse_note(line)
+
+        gen = song_generator()
+        metadata = next(gen)
+        
+        result = {
+            'name': metadata.get('name', ''),
+            'tempo': int(metadata.get('tempo', 0)),
+            'notes': gen
+        }
+        
+        print(f"Loaded song: {filename}")
+        return result
+
     
     ## Pulse setting function
     def set_pulse(self, pwm, freq, duty=512):
@@ -80,27 +125,23 @@ class GameMusicPlayer:
         
     ## note reader function
     def play_note(self, timer):
-        song = self.songs[self.current_song_index]
-        if self.current_note < len(song['notes']):
-            chord = song['notes'][self.current_note]
-            
+        try:
+            chord = next(self.notes)
             self.set_pulse(self.pulse1, chord['pulse1'])
             self.set_pulse(self.pulse2, chord['pulse2'])
             self.set_triangle(chord['triangle'])
             self.set_noise(chord['noise'])
+        except StopIteration:
+            print("All notes processed")
+            self.reload()
             
-            self.current_note += 1
-        else:
-            self.current_note = 0
 
     ## playback starting function
     def start_playback(self):
-        song = self.songs[self.current_song_index]
-        tempo = song['tempo']
-        timer_period = int(60000 / (tempo * 4))  # 16分音符単位
+        timer_period = int(60000 / (self.tempo * 4))  # 16分音符単位
         self.timer.init(period=timer_period, mode=machine.Timer.PERIODIC, callback=self.play_note)
-        print(f"Now playing: {song['song_name']}")
-        print(f"Tempo: {tempo} BPM")
+        print(f"Now playing: {self.song_name}")
+        print(f"Tempo: {self.tempo} BPM")
 
     ## playback stopping function
     def stop_playback(self):
@@ -178,27 +219,32 @@ class ButtonObserver:
     def start(self):
         print("start----------")
         self.led.value(1)
+        filename = self.songs[self.current_song_index]
+        print(filename)
+
         self.player = GameMusicPlayer(
-            current_song_index=self.current_song_index,
+            filename = filename,
             pulse1_pin=12,
             pulse2_pin=14,
             triangle_pin=27,
             noise_pin=26
         )
-        self.player.load_songs(self.songs)
         self.player.start_playback()
 
 # Main Program
 def main():
-    songs = ['pixel.json', 'rpg.json', 'megalovania.json']
-    button_observer = ButtonObserver(button_pin=2, change_pin=19, songs=songs)
-    button_observer.led.value(0)
+    songs = [f for f in os.listdir() if f.endswith('.csv')]
+    print(songs)
+    button_observer = ButtonObserver(
+            button_pin=2,
+            change_pin=19,
+            songs=songs
+            )
     try:
         while True:
             time.sleep(0.1)
     except KeyboardInterrupt:
         button_observer.stop_if_playing()
-        button_observer.led.value(0)
         print("Playback stopped.")
 
 if __name__ == "__main__":
